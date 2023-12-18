@@ -1,16 +1,22 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import { Component, Fragment } from 'react';
+
+export class App extends Component {
+  handleClick = () => {
+    console.log('hello');
+  };
+
+  render() {
+    return (
+      <Fragment>
+        <div>React homework test</div>
+        <button onClick={this.handleClick}>Click</button>
+        <ul>
+          <li>Dima</li>
+          <li>Valya</li>
+          <li>Artur</li>
+          <li>Denchik</li>
+        </ul>
+      </Fragment>
+    );
+  }
+}
